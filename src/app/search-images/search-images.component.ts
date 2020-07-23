@@ -13,7 +13,7 @@ export class SearchImagesComponent implements OnInit {
   constructor(private flickrService: FlickrService) { }
 
   ngOnInit() {
-    this.flickrService.search_keyword("food")
+    this.flickrService.search_keyword("Photos/food")
     .toPromise()
     .then(res => {
       this.images = res;})

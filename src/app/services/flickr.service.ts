@@ -34,7 +34,7 @@ export class FlickrService {
     }
     this.prevKeyword = keyword;
     const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&';
-    const params = `api_key=${environment.flickr.key}&text=${keyword}&format=json&nojsoncallback=1&per_page=30&page=${this.currPage}`;
+    const params = `api_key=${environment.flickr.key}&text=${keyword}&format=json&nojsoncallback=1&per_page=30&page=${2}`;
 
     return this.http.get(url + params).pipe(map((res: FlickrOutput) => {
       const urlArr = [];
